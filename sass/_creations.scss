@@ -1,0 +1,49 @@
+.creations{
+    grid-column: center-start / center-end;
+    display: grid;
+    margin: 10rem 0;
+
+    // change needed in 25rem 
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-gap: 5rem; 
+    position: relative;    
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        grid-column: 1/-1;
+    }
+    
+    .creation{
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            .creation__name{
+                color: $color-primary-dark
+            }
+
+            .creation__img{
+                    opacity: 0.3;
+            }
+        }
+
+           &__name{
+                position: absolute;
+                bottom: 2rem;
+                left: 2rem;
+                width: 60%;
+                margin: auto;
+                font-size: 3rem;
+                font-family: $font-display;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $color-primary;
+                }                
+                &__img{
+                    width: 100%;
+                }
+         }
+
+}

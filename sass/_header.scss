@@ -1,0 +1,26 @@
+.header{
+    background-color: purple;
+    grid-column: full-start/full-end;
+    background-image: linear-gradient(rgba($color-primary-dark, .3) ,rgba($color-primary-dark, .3)) , url("../images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position:center;
+    display: grid;
+    grid-template-columns: $grid-column-style;
+    grid-template-rows: 2fr 1.5fr 1fr;
+    // gap:2rem;
+    color: $color-primary;
+
+    &__heading-2{   
+        padding-top: 4rem;
+        grid-column: col-start 1/col-end 1;
+    }
+
+    &__heading-1{
+        grid-column: col-start 1/col-end 1;
+    }
+    
+    &__navbar__nav{ 
+        padding-top: 4rem;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,29 @@
+.footer{
+    background-color:black;
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: $grid-column-style;
+    padding :2rem 0;
+    &__div-1{
+        grid-column: col-start 1/ col-end 1;
+    }
+    &__div-2{
+
+        grid-column: col-start 2/col-end 2;
+        
+        &>*
+        {
+            justify-content: flex-end;
+        }
+        
+        .copyright{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            color: $color-Dark-gray-1;
+            font-size: 1.3rem;
+
+            a{color:   hsl(228, 28%, 79%);}
+        }
+    }
+}

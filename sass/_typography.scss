@@ -1,0 +1,75 @@
+%heading {
+    font-family: $font-display;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.heading-1{
+    @extend %heading;
+    padding: 3rem;  
+    font-size: 6rem;
+
+    border:.18rem solid #fff ;
+}
+
+.heading-2{
+    @extend %heading;
+    text-transform: none;
+     font-size: 3rem;
+        font-family: $font-primary;
+        font-weight: 300;
+}
+
+.heading-3{
+    @extend %heading;
+    font-size: 4.8rem;
+    // margin-bottom: 2rem;
+    color: #000;
+}
+
+
+.heading-5{
+    
+    font-size: 3rem;
+    color: $color-primary;
+    font-family: $font-primary;
+}
+
+
+.story__about{
+    font-size: 1.5rem;
+    color: $color-Dark-gray-1;
+    line-height:1.5;
+}
+
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    background-color: $color-primary;
+    font-weight: 400;
+    color: $color-primary-dark;
+    border: .2rem solid $color-primary-dark;
+    border-radius:0;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.7rem 4rem;
+    cursor: pointer;
+    transition: all .2s;
+
+
+    &:hover {
+        background-color: $color-primary-dark;
+        color: $color-primary;
+    }
+
+}
+
+
+
+.mb-sm {margin-bottom: 2rem; }
+.mb-md {margin-bottom: 3rem; }
+.mb-lg {margin-bottom: 4rem; }
+.mb-hg {margin-bottom: 10rem; }

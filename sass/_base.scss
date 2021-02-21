@@ -1,0 +1,81 @@
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// - White: hsl(0, 0%, 100%)
+// - Black: hsl(0, 0%, 0%)
+// - Dark Gray: hsl(0, 0%, 55%)
+// - Very Dark Gray: hsl(0, 0%, 41%)
+
+// ### Neutral
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size: 15px
+
+// ### Fonts
+
+// - Family: [Alata](https://fonts.google.com/specimen/Alata)
+// - Weight: 400
+
+// - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+// - Weight: 300
+
+// ## Icons
+
+// We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
+
+// - [Font Awesome](https://fontawesome.com)
+// - [IcoMoon](https://icomoon.io)
+// - [Ionicons](https://ionicons.com)
+
+
+// COLOR VARIABLES
+$color-primary:hsl(0, 0%, 100%);
+$color-primary-dark:hsl(0, 0%, 0%);
+$color-Dark-gray-1: hsl(0, 0%, 55%);
+$color-Dark-gray-2: hsl(0, 0%, 41%);
+
+$font-display:"Josefin Sans" ,sans-serif;//300
+$font-primary:"Alata",sans-serif;//400
+
+// GRID COLUMN STYLE
+$grid-column-style:[full-start] minmax(6rem,1fr) repeat(2,[col-start] 56rem [col-end] ) minmax(6rem,1fr) [full-end];
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $font-primary;
+    font-weight: 300;
+}
+
+.container{
+    display: grid;
+    // min-content  same as auto 
+    // 1140/8--->14rem 
+    // grid-template-rows:min-content 80vh  30vw repeat(2,min-content);
+    grid-template-rows: 90vh  45vw repeat(2,min-content);
+    grid-template-columns:[full-start] minmax(6rem,1fr)  [center-start] 
+    repeat(8, [col-start]  minmax(min-content,14rem)  [col-end]) 
+     [center-end] minmax(6rem,1fr) [full-end];
+}

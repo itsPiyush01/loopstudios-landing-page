@@ -1,0 +1,23 @@
+.navbar__nav  {
+    display: flex;
+    grid-gap: 2.5rem;
+    & > * {
+        list-style: none;
+    }
+
+    .nav__link:link ,.nav__link:visited{
+        font-size: 1.3rem;
+        color:$color-primary;
+        text-decoration: none;
+    }
+    .nav__link:after{
+        display:block;
+        content: '';
+        border-bottom: solid .3rem $color-primary;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-out;
+    }
+    .nav__link:hover:after{
+        transform: scaleX(1);
+    }
+}
