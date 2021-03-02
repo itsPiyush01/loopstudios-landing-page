@@ -1,22 +1,45 @@
 .creations{
-    grid-column: center-start / center-end;
-    display: grid;
-    margin: 10rem 0;
-
-    // change needed in 25rem 
-    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
-    grid-gap: 5rem; 
+     display: grid;
+     grid-column: center-start / center-end;
+     
+    margin-bottom: 10rem;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,2fr));
+    grid-gap: 4rem; 
     position: relative;    
 
-    &__header{
+    @media only screen  and (max-width:$bp-X-small){
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    &__name{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        grid-column: 1/-1;
+        grid-column: 1 /-1;
     }
-    
-    .creation{
+
+    &__btn  {
+        @media only screen  and (max-width:37.5em){
+            display: none !important;
+        }
+    }
+
+    &__btn__div{
+        grid-column: 1/-1;
+        order: 100;
+        display: none;
+        margin-top: 1rem;
+        
+        @media only screen and (max-width:37.5em) {
+            display: inherit;
+            justify-self: center;
+        }
+    }
+
+
+        .creation{
         position: relative;
         cursor: pointer;
         &:hover{
@@ -40,10 +63,17 @@
                 font-weight: 400;
                 text-transform: uppercase;
                 color: $color-primary;
-                }                
+       
+                @media only screen and (max-width:$bp-XXX-small) {
+                      font-size: 2rem;
+                    }
+    
+                }      
+
                 &__img{
                     width: 100%;
                 }
-         }
+       
+        }
 
 }

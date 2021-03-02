@@ -2,29 +2,62 @@
     grid-column:full-start/full-end;
     margin: 10rem 0;
 
+
     display: grid;
-    grid-template-rows: repeat(8,1fr);
+    grid-template-rows: repeat(10,1fr);
+    @include grid-column-custom-style(largeScreen,false);
     
-    grid-template-columns: [full-start] minmax(6rem,1fr) [center-start]40rem repeat(2,16rem) 40rem [center-end ] minmax(6rem,1fr) [full-end];
+    @media only screen and (max-width:$bp-XX-Large) {
+        margin:7rem 0; 
+    }
+
+    @media only screen and (max-width:$bp-small)
+    {
+        grid-template-rows: auto;
+    }
+    
+    @media only screen and (max-width:$bp-X-small)
+    { 
+        @include grid-column-custom-style(smallScreen,false);
+    }
 
     &__picture{
-      
-        background-color: red;
+
         width: 100%;
         height: 100%;
-        object-fit: fill;
-        grid-column: center-start/ 5;
-        grid-row:1/-1;
+        object-fit: cover;
+        grid-column: center-start/col-end 5;
+        grid-row: 1 /-1;
+        @media only  screen  and (max-width:$bp-small) {
+           
+            @include grid-column-custom-style(smallScreen,false);
+            grid-column: center-start/center-end;
+        }
     }
     &__content{
-        color: black;
+        width: 100%;
+        height: 100%;
         background-color:$color-primary;
         display: flex;
         flex-direction: column;
         justify-content:flex-end;
-        align-items: center;
-        grid-column: 4/center-end;    
-        grid-row: 4/-1;
-        padding-left: 10rem;
+        grid-column: col-start 5/center-end;    
+        grid-row: 5 /-1;
+
+        padding:0 8rem;
+        @media only screen and (max-width:$bp-XX-Large) {
+            padding: 0 4rem 0rem 8rem;
+        }
+        
+        @media only  screen  and (max-width:$bp-small) {
+            grid-column: center-start/center-end;
+            text-align: center;
+            padding:0;
+            padding-top: 2rem;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+    
     }
 }

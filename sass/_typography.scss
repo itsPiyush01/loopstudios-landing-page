@@ -11,6 +11,44 @@
     font-size: 6rem;
 
     border:.18rem solid #fff ;
+  
+
+    @media only screen and (max-width:$bp-medium) {
+        padding: 2rem;
+        // font-size: 5.5rem;
+    }
+    
+    @media only screen and (max-width:$bp-small) {
+    // margin: 0 auto;
+    padding: 1.5rem;
+    // font-size: 4rem;
+
+    }
+    @media only screen and (max-width:$bp-X-small) {
+    // margin: 0 auto;
+    // padding: 1rem;
+    // font-size: 5.5rem;
+
+    }
+
+    @media only screen and (max-width:$bp-X-small) {
+        // margin: 0 auto;
+ 
+        }
+    @media only screen and (max-width:$bp-XX-small) {
+    // margin: 0 auto;
+    // padding: 1rem;
+    font-size: 4rem;
+
+    }
+    @media only screen and (max-width:$bp-XXX-small) {
+    // margin: 0 auto;
+    // padding: 1rem;
+    font-size: 3rem;
+
+    }
+   
+    
 }
 
 .heading-2{
@@ -24,8 +62,25 @@
 .heading-3{
     @extend %heading;
     font-size: 4.8rem;
-    // margin-bottom: 2rem;
+ 
+    @media only  screen  and (max-width:$bp-XX-Large) {
+        // font-size: 3rem;
+        font-size: 4rem;
+                // font
+    }
+
+    @media only screen and (max-width:$bp-X-small) {
+        // margin: 0 auto;
+        // padding: 1rem;
+        font-size: 3rem;
+    
+        }
+    
+        
+
+    // margin-top: 2rem;
     color: #000;
+    
 }
 
 
@@ -38,9 +93,21 @@
 
 
 .story__about{
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
+    font-size: 1.8rem;
+
+    font-family: $font-primary;
+    font-weight: 300;
+
+
     color: $color-Dark-gray-1;
     line-height:1.5;
+
+
+    @media only screen and (max-width:$bp-small){
+    text-align: center;
+    line-height: 2;
+    }
 }
 
 
@@ -59,6 +126,7 @@
     cursor: pointer;
     transition: all .2s;
 
+    // order: 100;
 
     &:hover {
         background-color: $color-primary-dark;
@@ -70,6 +138,11 @@
 
 
 .mb-sm {margin-bottom: 2rem; }
-.mb-md {margin-bottom: 3rem; }
+.mb-md {margin-bottom: 3rem;
+    @media only  screen  and (max-width:$bp-XX-Large) {
+        margin-bottom: 1rem;
+    }
+
+}
 .mb-lg {margin-bottom: 4rem; }
 .mb-hg {margin-bottom: 10rem; }

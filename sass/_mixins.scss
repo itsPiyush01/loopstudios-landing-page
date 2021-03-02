@@ -1,0 +1,31 @@
+@mixin grid-column-custom-style($size,$IsParent)
+{
+    @if ($size == smallScreen  and  $IsParent==true) 
+       {
+        grid-template-columns:[full-start] minmax(2rem,1fr)  [center-start] 
+        repeat(8, [col-start]  minmax(min-content,14rem)  [col-end]) 
+        [center-end] minmax(2rem,1fr) [full-end];
+    }
+    @else if ($size == smallScreen  and  $IsParent==false) 
+    {
+        grid-template-columns:[full-start] minmax(2rem,1fr) [center-start] 
+        repeat(10,[col-start] 2fr  [col-end]) [center-end] minmax(2rem,1fr) [full-end];
+    }
+    @else if $size == largeScreen  and  $IsParent==true 
+    {
+        grid-template-columns:[full-start] minmax(4rem,1fr)  [center-start] 
+        repeat(8, [col-start]  minmax(min-content,14rem)  [col-end]) 
+        [center-end] minmax(4rem,1fr) [full-end];
+    }
+    @else if $size == largeScreen  and  $IsParent==false 
+    {
+        grid-template-columns:[full-start] minmax(4rem,1fr) [center-start] repeat(10,[col-start] 2fr  [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+    }
+
+
+}
+
+
+
+
+

@@ -34,13 +34,17 @@
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Events</a></li>
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Products</a></li>
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Support</a></li>
-      </ul>  
+  </ul>     
     <h1 class="header__heading-1 heading-1">
       Immersive experiences that deliver
     </h1>
   </header>  
         <div class="story">
-          <img class="story__picture" src="./images/desktop/image-interactive.jpg" alt="img">
+          <picture class="story__picture">
+            <source srcset="images/mobile/image-interactive.jpg" media="(max-width:37.5em)">
+              <img class="story__picture" srcset="./images/desktop/image-interactive.jpg" alt="creation 1">
+            </img>
+          </picture>
           <div class="story__content"> 
           <h3 class="heading-3 mb-md">The leader in interactive VR </h3>
         <p class="story__about">
@@ -52,78 +56,118 @@
       </div>
   </div>
 
-  <div class="creations mb-hg">
-    <div class="creations__header">
+  <div class="creations">
+    <div class="creations__name">
       <h3 class="heading-3 mb-md">Our creations</h3>
-      <button class="btn mb-md"> See all</button>
+      <button class="creations__btn btn mb-md"> See all</button>
     </div>
+    <div class="creations__btn__div">
+      <button class="creations__btn__small__screen btn mb-md ">See all</button>
+      </div>
     
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-deep-earth.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      Deep  earth</h4>
+      <div class="creation">
+        
+        <picture class="creation__img">
+          <source srcset="images/mobile/image-deep-earth.jpg" media="(max-width:37.5em)">
+          <img class="creation__img" srcset="images/desktop/image-deep-earth.jpg" alt="creation 1">
+        </img>
+        </picture>
+        <h4 class="creation__name">
+          Deep  earth</h4>
+        </div>
+          
+    
+        <div class="creation">
+         <picture>
+          <source srcset="images/mobile/image-night-arcade.jpg" media="(max-width:37.5em)">
+          <img class="creation__img" srcset="images/desktop/image-night-arcade.jpg" alt="creation 2">
+        </img>
+        </picture>
+  
+        <h4 class="creation__name">
+          Night arcade
+        </h4>
+        </div>
+    
+        <div class="creation">
+          <picture>
+            <source srcset="images/mobile/image-soccer-team.jpg" media="(max-width:37.5em)">
+              <img class="creation__img" srcset="images/desktop/image-soccer-team.jpg" alt="creation 3">
+            </img>
+          </picture>
+          
+          
+        <h4 class="creation__name">
+          Soccer team VR
+          </h4>
+        </div>
+    
+        <div class="creation">
+          <picture>
+            <source srcset="images/mobile/image-grid.jpg" media="(max-width:37.5em)">
+              <img class="creation__img" srcset="images/desktop/image-grid.jpg" alt="creation 4">
+            </img>
+          </picture>
+        
+        <h4 class="creation__name">
+          The grid
+       </h4>
+        </div>
+    
+        <div class="creation">
+          <picture>
+            <source srcset="images/mobile/image-from-above.jpg" media="(max-width:37.5em)">
+              <img class="creation__img" srcset="images/desktop/image-from-above.jpg" alt="creation 5">
+        </img>
+          </picture>
+        
+        <h4 class="creation__name">
+          From up above VR
+         </h4>
+        </div>
+    
+        <div class="creation">
+          <picture>
+            <source srcset="images/mobile/image-pocket-borealis.jpg" media="(max-width:37.5em)">
+              <img class="creation__img" srcset="images/desktop/image-pocket-borealis.jpg" alt="creation 6">
+            </img>
+          </picture>
+         
+        <h4 class="creation__name">
+          Pocket borealis
+         </h4>
+        </div>
+    
+        <div class="creation">
+          <picture>
+            <source srcset="images/mobile/image-curiosity.jpg" media="(max-width:37.5em)">
+              <img class="creation__img" srcset="images/desktop/image-curiosity.jpg" alt="creation 7">
+            </img>
+          </picture>
+       
+        <h4 class="creation__name">
+          The curiosity
+          </h4>
+        </div>
+    
+        <div class="creation">
+          <picture>
+            <source srcset="images/mobile/image-fisheye.jpg" media="(max-width:37.5em)">
+              <img class="creation__img" srcset="images/desktop/image-fisheye.jpg" alt="creation 8">
+            </img>
+          </picture>
+          
+        <h4 class="creation__name">
+          Make it fisheye</h4>
+        </div>   
     </div>
-      
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-night-arcade.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      Night arcade
-    </h4>
+        </div>   
     </div>
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-soccer-team.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      Soccer team VR
-      </h4>
-    </div>
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-grid.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      The grid
-   </h4>
-    </div>
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-from-above.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      From up above VR
-     </h4>
-    </div>
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-pocket-borealis.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      Pocket borealis
-     </h4>
-    </div>
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-curiosity.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      The curiosity
-      </h4>
-    </div>
-
-    <div class="creation">
-      <img class="creation__img" src="images/desktop/image-fisheye.jpg" alt="creation 1">
-    </img>
-    <h4 class="creation__name">
-      Make it fisheye</h4>
-    </div>
-
-
-  </div>
+        </div>   
+      </div>
+   
+  
+  
   <footer class="footer">
 
     <div class="footer__div-1">
@@ -143,7 +187,7 @@
 
     <div class="footer__div-2">
 
-  <ul class="navbar__nav mb-sm">
+  <ul class="navbar__nav mb-sm navbar__nav__icon">
     <li class="nav__item">
       <a  class="nav__link" href="https://www.facebook.com" target="_blank">
         <img src="./images/icon-facebook.svg" alt="Facebook icon" srcset="">
