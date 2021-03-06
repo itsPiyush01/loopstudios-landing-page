@@ -6,7 +6,7 @@
     text-align: center;
     }
 
-    @media only screen and (max-width:$bp-X-small) {
+    @media only screen and (max-width:$bp-small) {
         // margin: 0 auto;
         // padding: 1rem;
         // font-size: 3rem;
@@ -17,17 +17,14 @@
         &__icon{
             flex-direction: row;
         }
-      
+    
         
         // &__header{
         //     // flex-wrap: 0;
+            
         // }
 
     }
-
-    
-    
-    
 
     .nav__link:link ,.nav__link:visited{
         font-size: 1.3rem;
@@ -45,5 +42,69 @@
         transform: scaleX(1);
     }
 }
+
+
+
+
+
+.header__toggle__btn{
+display: none;
+
+    @media only screen and (max-width:$bp-small) {
+    display: block;
+    // position: fixed
+    position: absolute;
+    z-index: 10000;
+    padding-top: 5.5rem;
+    right:2.5rem;
+
+        // overflow: hidden;
+}
+
+
+}
+
+
+
+.header__menu{
+    // display: none !important;
+    display: block;
+    display: flex;
+    grid-column: col-start 5/center-end;
+    padding-top: 4rem;
+    justify-content:flex-end; 
+ 
+    @media only screen and (max-width:$bp-small) { 
+        // display: none;
+        opacity: 0;
+        width: 0;
+        // transition-property: width ;
+        // transition-duration: 1s ;
+        // transition-timing-function: ease-out ;
+
+        // & > *{}
+        // transition-property: width !important;
+        // transition-duration: 1s !important;
+        // transition-timing-function: ease-out !important;
+        // padding: 0;
+    
+        // animation-duration: .5s;
+        // animation-name: slidein;
+        // // width: 100vw !important;
+    
+        // animation-fill-mode: forwards
+        // animation-fill-mode: both;
+
+        // transition: all 1s;
+        
+    
+    
+    }
+    
+
+}
+
+
+
 
 

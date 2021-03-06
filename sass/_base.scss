@@ -40,9 +40,10 @@ body{
 
 .inactive{
     display: none !important;
+    opacity: 0;
 }
 
 .active{
 opacity: 1;
-display: block;
+display: block !important;
 }

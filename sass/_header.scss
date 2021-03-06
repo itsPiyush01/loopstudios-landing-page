@@ -22,24 +22,20 @@
     &__heading-2{   
         padding-top: 4rem;
         grid-column: center-start / col-end 1;
+
+        @media only screen and (max-width:$bp-small) {
+            z-index: 250;
+        }
     }
 
     &__heading-1{
         grid-column: center-start /col-end 5;
         padding: 1rem;
-        @media only screen and (max-width:$bp-X-small) {
+        @media only screen and (max-width:$bp-small) {
             grid-row-gap:3rem;
             grid-column: center-start/center-end;
+            grid-row: 2/3;
             }
     }
-    
-    &__navbar__nav{ 
-        grid-column: col-start 5/center-end;
-        padding-top: 4rem;
-        justify-content:flex-end;        
-        @media only screen and (max-width:$bp-medium) {
-            background-color: red;
-            display: none !important;
-        }
-    }
+
 }

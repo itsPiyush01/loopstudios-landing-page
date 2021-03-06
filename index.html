@@ -25,17 +25,41 @@
 
 <div class="container">  
   <header class="header">
-    <h2 class="header__heading-2 heading-2">
+    <h2 id="hello" class="header__heading-2 heading-2">
       loopstudios
     </h2>
-      <ul class="header__navbar__nav navbar__nav">
+
+
+    
+    <div class="header__toggle__btn">
+      <a class="nav__btn-link" href="#" onclick="myFunction()">
+      <img
+        class="nav__btn nav__btn-hamburger"
+        alt="icon-hamburger"
+        src="images/icon-hamburger.svg"
+        id="icon-hamburger"
+      />
+
+      <img
+        class="nav__btn nav__btn-close inactive"
+        alt="icon-close"
+        src="images/icon-close.svg"
+        id="icon-close"
+      />
+    </a>
+
+  </div>
+    
+    <div class="header__menu menu__toggle__effect_off"   id="header__nav">
+    <ul class="header__navbar__nav navbar__nav">
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">About</a></li>
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Careers</a></li>
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Events</a></li>
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Products</a></li>
         <li class="header__nav__item nav__item"><a class="nav__link" href="#">Support</a></li>
-  </ul>     
-    <h1 class="header__heading-1 heading-1">
+      </ul>
+      </div>
+      <h1 class="header__heading-1 heading-1">
       Immersive experiences that deliver
     </h1>
   </header>  
@@ -67,13 +91,13 @@
     
       <div class="creation">
         
-        <picture class="creation__img">
+        <picture class="">
           <source srcset="images/mobile/image-deep-earth.jpg" media="(max-width:37.5em)">
           <img class="creation__img" srcset="images/desktop/image-deep-earth.jpg" alt="creation 1">
         </img>
         </picture>
         <h4 class="creation__name">
-          Deep  earth</h4>
+          Deep  <br> earth</h4>
         </div>
           
     
@@ -85,7 +109,7 @@
         </picture>
   
         <h4 class="creation__name">
-          Night arcade
+          Night <br> arcade
         </h4>
         </div>
     
@@ -98,7 +122,7 @@
           
           
         <h4 class="creation__name">
-          Soccer team VR
+          Soccer <br> team VR
           </h4>
         </div>
     
@@ -110,7 +134,7 @@
           </picture>
         
         <h4 class="creation__name">
-          The grid
+          The <br> grid
        </h4>
         </div>
     
@@ -122,7 +146,7 @@
           </picture>
         
         <h4 class="creation__name">
-          From up above VR
+          From up  <br> above VR
          </h4>
         </div>
     
@@ -134,7 +158,7 @@
           </picture>
          
         <h4 class="creation__name">
-          Pocket borealis
+          Pocket <br> borealis
          </h4>
         </div>
     
@@ -146,7 +170,7 @@
           </picture>
        
         <h4 class="creation__name">
-          The curiosity
+          The <br>  curiosity
           </h4>
         </div>
     
@@ -158,7 +182,7 @@
           </picture>
           
         <h4 class="creation__name">
-          Make it fisheye</h4>
+          Make it <br> fisheye</h4>
         </div>   
     </div>
         </div>   
@@ -227,5 +251,37 @@
 <script >
   var d = new Date();
   document.getElementById("year").innerHTML = d.getFullYear();
+
+  function myFunction() {
+      console.log("hello");
+
+      var icon_close = document.getElementById("icon-close");
+      var icon_hamburger = document.getElementById("icon-hamburger");
+    
+    
+      var nav = document.getElementById("header__nav");
+
+      icon_close.classList.toggle("inactive");
+      icon_hamburger.classList.toggle("inactive");
+      icon_close.classList.toggle("position__fixed__close-icon");
+      // icon_hamburger.classList.toggle("position__fixed");
+      nav.classList.toggle("active");
+
+      document.getElementsByClassName("header__heading-2")[0].classList.toggle("position__fixed__heading-2")
+      document.getElementsByClassName("header__heading-2")[0].classList.toggle("position__fixed__close-icon")
+
+      // .header__menu
+
+      var menu= document.getElementsByClassName("header__menu");  
+      menu[0].classList.toggle("inactive");
+      menu[0].classList.toggle("menu__toggle__effect");
+      menu[0].classList.toggle("menu__toggle__effect_off");
+
+      
+
+  // var company__logo=document.querySelector(".header__menu").
+    
+
+    }
 </script>
 </html>
