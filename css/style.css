@@ -118,7 +118,7 @@ body {
   .header__heading-1 {
     grid-column: center-start /col-end 5;
     padding: 1rem; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 37.5em) {
       .header__heading-1 {
         grid-row-gap: 3rem;
         grid-column: center-start/center-end;
@@ -270,7 +270,7 @@ body {
 .heading-1 {
   padding: 3rem;
   font-size: 6rem;
-  border: .18rem solid #fff; }
+  border: 0.18rem solid white; }
   @media only screen and (max-width: 62.5em) {
     .heading-1 {
       padding: 2rem; } }
@@ -397,6 +397,9 @@ body {
           left: 0;
           right: auto;
           width: 100%; } }
+  @media only screen and (max-width: 56.25em) and (max-width: 37.5em) {
+    .menu__toggle__effect {
+      padding-left: 2rem; } }
 
 @keyframes slideIn {
   0% {

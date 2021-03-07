@@ -77,10 +77,11 @@
         }
     
     }
+    @media only screen and (max-width:$bp-X-small) {
+        padding-left: 2rem;
+    }
        
 }
-
-
    
 }
 
